@@ -3,7 +3,7 @@
 # Ember
 # Node.js
 
-> A performance and test driven Grunt + Webpack + Ember + Node.js template for building maintainable single page apps.
+> WARNING: This is very much a work in progress.
 
 ## Install
 
