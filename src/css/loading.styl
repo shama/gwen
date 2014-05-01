@@ -1,0 +1,18 @@
+@import 'nib'
+@import 'variables'
+
+@keyframes loading
+  33%
+    color: $colors[0]
+  66%
+    color: $colors[2]
+
+body.is-loading
+  font-family: $font-monospace
+  background-color: $bgColor
+
+.initial-loading
+  width: 30em
+  margin: 10em auto
+  font-size: .5em
+  animation(loading 4s linear infinite)

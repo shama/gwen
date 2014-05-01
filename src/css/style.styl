@@ -1,0 +1,27 @@
+@import 'nib'
+
+global-reset()
+
+@import 'variables'
+@import 'mixins'
+@import 'layout'
+@import 'nav'
+
+*
+  box-sizing(border-box)
+
+body
+  font-family: $font
+  background-color: #FF5E45
+
+a
+  color: $black
+  &:hover
+    text-decoration: none
+
+pre
+  font-family: $font-monospace
+  font-weight: bold
+
+.content
+  height: 100%

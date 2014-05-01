@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+process.title = 'gwen';
+
+var download = require('download');
+
+var repo = 'https://github.com/shama/gwen/archive/master';
+if (process.platform === 'win32') repo += '.zip';
+else  repo += '.tar.gz';
+
+var d = download(repo, process.argv[2], { extract: true });
+d.on('error', process.stderr.write)

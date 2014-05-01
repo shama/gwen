@@ -1,0 +1,17 @@
+// Layout Specific Styling
+$contentWidth = 58em
+
+.container
+  width: 100%
+  article
+    width: 100%
+    padding: 2em 0
+    clear: both
+    display: block
+  for color, i in $colors
+    article:nth-child({i + 1})
+      background-color: color
+
+  section
+    width: $contentWidth
+    margin: 0 auto

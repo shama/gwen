@@ -1,0 +1,32 @@
+{
+  "name": "example-ember-component",
+  "description": "An example Ember component",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shama/example-ember-component.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "grunt dev",
+    "test": "grunt test",
+    "prepublish": "grunt prepublish"
+  },
+  "devDependencies": {
+    "ember-templates-loader": "^0.2.1",
+    "style-loader": "^0.6.0",
+    "css-loader": "^0.6.2",
+    "coffee-loader": "^0.6.0",
+    "script-loader": "^0.5.1",
+    "raw-loader": "^0.5.0",
+    "stylus-loader": "^0.1.0",
+    "grunt": "^0.4.1",
+    "grunt-webpack": "^0.11.1",
+    "grunt-contrib-connect": "^0.5.0",
+    "grunt-contrib-watch": "^0.5.3",
+    "grunt-saucelabs": "^4.1.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-qunit": "^0.3.0",
+    "matchdep": "^0.3.0"
+  }
+}

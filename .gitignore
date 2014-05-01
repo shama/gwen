@@ -1,0 +1,12 @@
+node_modules
+bower_components
+sauce_connect.log
+dist
+dist_desktop
+dist_server
+build
+npm-debug.log
+.DS_Store
+metrics/
+.tmp
+.idea

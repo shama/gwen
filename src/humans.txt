@@ -1,0 +1,16 @@
+  __________      _____________ _______   
+ /  _____/  \    /  \_   _____/ \      \  
+/   \  __\   \/\/   /|    __)_  /   |   \ 
+\    \_\  \        / |        \/    |    \
+ \______  /\__/\  / /_______  /\____|__  /
+        \/      \/          \/         \/ 
+
+/* TEAM */
+  Put your team here
+
+/* THANKS */
+  Name: ...
+
+/* SITE */
+  Last update: <%= lastUpdate %>
+  Software: Grunt, webpack, Ember.js, Node.js, npm, QUnit, Stylus, YUIDoc
