@@ -32,6 +32,7 @@ window.App = module.exports = Ember.Application.extend({
 });
 
 // Load in CSS
+require('font-awesome/css/font-awesome.css')
 require('./css/style.styl');
 
 // Load helpers
