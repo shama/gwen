@@ -1,16 +1,16 @@
-# example-ember-component v0.1.0
+# editor-ember-component v0.1.0
 
 > An example ember component
 
 ## Usage
 
 ```html
-{{example-thing percent=42}}
+{{my-editor content=content}}
 ```
 
 ## Install
 
-`npm install example-ember-component --save`
+`npm install editor-ember-component --save`
 
 ## Start
 

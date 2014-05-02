@@ -10,7 +10,9 @@ QUnit.testStart(function() {
 
   // Setup Application Fixture
   window.App.ApplicationRoute = Ember.Route.extend();
-  window.App.ApplicationController = Ember.Controller.extend({});
+  window.App.ApplicationController = Ember.Controller.extend({
+    content: 'Testing',
+  });
   window.App.LoadingBarComponent = require('../index.js');
   Ember.TEMPLATES['components/my-editor'] = require('../index.hbs');
 });
