@@ -21,7 +21,7 @@ module.exports = function(options, done) {
   // Create a REST interface to our LevelDB
   var rest = new LevelREST(levelup(options.db, {valueEncoding: 'json'}))
 
-  //rest.post('posts', { id: 1, title: 'This is my title' })
+  //rest.post('notes', { id: 1, title: 'This is my title' }, {}, function() {})
 
   // Create a server
   var app = jaws()
@@ -32,20 +32,15 @@ module.exports = function(options, done) {
     var id = req.route.params.id || ''
     var endpoint = req.route.params.endpoint
     var method = req.method.toLowerCase()
-    // TODO: Using this method for now because streams are borked with req.pipe(rest)
-    /*
-    req.body(function(err, body) {
-      var args = [endpoint + '/' + id]
-      if (body) args.push(body)
-      args.push(function(err, data) {
-        console.log('data', data)
-        res.json(data || { success: true })
-      })
-      rest[method].apply(rest, args)
-    })*/
 
-    req.pipe(rest[method](endpoint + '/' + id)).pipe(res)
-  })
+    var s = rest[method](endpoint + '/' + id)
+    s.on('data', function(buf) {
+      res.json(buf)
+    })
+
+    // :'{ I wish this worked
+    //req.pipe(rest[method](endpoint + '/' + id)).pipe(res)
+  }).nocache()
 
   // Route to reload the app
   //app.route('/_reload', require('./reload')(options))
