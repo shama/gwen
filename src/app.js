@@ -20,7 +20,7 @@ window.App = module.exports = Ember.Application.extend({
   LOG_TRANSITIONS: !!!PRODUCTION,
   Resolver: require('ember-webpack-resolver?' + __dirname)({
     components: {
-      'example-thing': require('example-ember-component/index.coffee')
+      'note-editor': require('editor-ember-component')
     },
     extensions: ['.js', '.js6', '.coffee', '.hbs'],
   }),
@@ -32,7 +32,7 @@ window.App = module.exports = Ember.Application.extend({
 });
 
 // Load in CSS
-require('font-awesome/css/font-awesome.css')
+require('font-awesome/css/font-awesome.css');
 require('./css/style.styl');
 
 // Load helpers
