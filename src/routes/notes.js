@@ -12,10 +12,7 @@ module.exports = Ember.Route.extend({
    * @param {Object} params
    */
   model: function(params) {
-    //this.get('store').find('notes');
-    return [
-      { id: 1, title: 'Testing', date: new Date(), body: 'Testing' }
-    ];
+    return this.get('store').find('note');
   },
   actions: {
     /**
@@ -24,9 +21,16 @@ module.exports = Ember.Route.extend({
      * @method add
      */
     add: function() {
-      var next = this.controller.content.length;
-      this.controller.content.pushObject({id: next, title: 'New Note', body: 'Testing'});
-      this.transitionTo('notes.note', next);
+      var note = this.get('store').createRecord('note', {
+        title: 'New note',
+        body: 'Testing',
+      });
+      return note.save().then(function(post) {
+        console.log('success!', post)
+        this.transitionTo('notes.note', post);
+      }.bind(this), function(err) {
+        console.error(err);
+      });
     },
   },
 });

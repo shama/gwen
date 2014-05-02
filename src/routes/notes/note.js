@@ -12,7 +12,6 @@ module.exports = Ember.Route.extend({
    * @param {Object} params
    */
   model: function(params) {
-    //this.get('store').find('notes');
-    return { id: 1, title: 'Testing', date: new Date(), body: 'Testing' };
+    return this.get('store').find('note', params.note_id);
   },
 });
