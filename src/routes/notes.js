@@ -14,7 +14,7 @@ module.exports = Ember.Route.extend({
   model: function(params) {
     //this.get('store').find('notes');
     return [
-      { id: 1, title: 'Testing', body: 'Testing' }
+      { id: 1, title: 'Testing', date: new Date(), body: 'Testing' }
     ];
   },
   actions: {
