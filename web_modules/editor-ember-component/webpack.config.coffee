@@ -1,3 +1,4 @@
+# helper for setting webpack config
 module.exports = (entry, output) ->
   path = require('path')
   res =

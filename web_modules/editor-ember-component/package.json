@@ -1,6 +1,6 @@
 {
-  "name": "example-ember-component",
-  "description": "An example Ember component",
+  "name": "editor-ember-component",
+  "description": "An editor for Ember",
   "version": "0.1.0",
   "repository": {
     "type": "git",
@@ -9,8 +9,7 @@
   "main": "index.js",
   "scripts": {
     "start": "grunt dev",
-    "test": "grunt test",
-    "prepublish": "grunt prepublish"
+    "test": "grunt test"
   },
   "devDependencies": {
     "ember-templates-loader": "^0.2.1",
@@ -28,5 +27,8 @@
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-qunit": "^0.3.0",
     "matchdep": "^0.3.0"
+  },
+  "dependencies": {
+    "codemirror": "^4.1.0"
   }
 }

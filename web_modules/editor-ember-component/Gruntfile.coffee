@@ -4,7 +4,6 @@ module.exports = ->
   @registerTask 'dev', ['default', 'connect', 'watch']
   @registerTask 'test', ['default', 'connect', 'qunit']
   @registerTask 'sauce', ['test', 'saucelabs-qunit']
-  @registerTask 'prepublish', ['webpack:prepublish']
 
   webpack = require('./webpack.config.coffee')
 
@@ -14,11 +13,10 @@ module.exports = ->
     clean: ['.tmp']
 
     webpack:
-      example: webpack('test/example.coffee', '.tmp/example.js')
-      test: webpack('test/test.coffee', '.tmp/test.js')
-      prepublish: webpack('index.coffee', 'index.js')
+      example: webpack('test/example.js', '.tmp/example.js')
+      test: webpack('test/test.js', '.tmp/test.js')
 
-    connect: test: options: base: ['test', '.tmp']
+    connect: test: options: base: ['.tmp', 'test']
 
     qunit: test: options:
       urls: ['http://localhost:8000/test.html']
@@ -28,7 +26,9 @@ module.exports = ->
       #browsers: require('./test/browsers.coffee')
       testname: '<%= pkg.name %>'
 
+    # watch files and run tasks upon changes
     watch:
+      options: spawn: false
       tests:
         options: livereload: true
         files: ['test/**/*', 'index.{coffee,hbs}']
@@ -36,4 +36,5 @@ module.exports = ->
       gruntfile:
         files: ['Gruntfile.coffee', 'webpack.config.coffee']
 
+  # load all grunt-* tasks
   @loadNpmTasks(task) for task in require('matchdep').filterDev(['grunt-*', '!grunt-cli'])
