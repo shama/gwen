@@ -1,0 +1,8 @@
+<ul class="notes-sidebar">
+  <li class="notes-add">{{#app-button type="plus-square" action="add" class="button"}} Add Note{{/app-button}}</li>
+  {{#each}}
+    <li class="notes-link">{{#link-to "notes.note" this}}{{title}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

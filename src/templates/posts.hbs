@@ -1,9 +1,0 @@
-<ul class="list-group">
-{{#each}}
-  <li class="list-group-item">{{#link-to 'posts.post' this}}{{title}}{{/link-to}}
-{{/each}}
-</ul>
-
-{{outlet}}
-
-<button {{action "addPost"}}>Add Post</button>
