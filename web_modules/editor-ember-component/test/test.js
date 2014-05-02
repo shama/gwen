@@ -21,7 +21,7 @@ QUnit.testDone(function() {
   Ember.run(window.App, 'destroy');
 });
 
-// Automatically load all tests (files that end with _test.coffee)
+// Automatically load all tests (files that end with _test.js)
 var requireTest = require.context('./', true, /_test\.js$/);
 requireTest.keys().forEach(function(name) {
   requireTest(name);

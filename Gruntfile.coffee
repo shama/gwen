@@ -44,7 +44,7 @@ module.exports = ->
         entry: 'src/index.js'
         output: '<%= dist %>/' + (if !!@option('production') then '[hash]' else 'bundle') + '.js'
       test:
-        entry: 'test/tests.coffee'
+        entry: 'test/tests.js'
         output: '<%= dist %>/tests.js'
 
     # node server script to run
