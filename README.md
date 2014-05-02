@@ -1,4 +1,4 @@
-# Grunt, webpack, Ember.js, Node.js
+# grunt, webpack, ember, node
 
 > WARNING: This is very much a work in progress.
 
