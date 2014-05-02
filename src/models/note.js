@@ -5,7 +5,6 @@
  * @extends DS.Model
  */
 module.exports = DS.Model.extend({
-  id: DS.attr('number'),
   title: DS.attr('string'),
   created: DS.attr('date'),
   body: DS.attr('string'),
