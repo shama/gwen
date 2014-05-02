@@ -6,4 +6,4 @@
  */
 module.exports = Ember.View.extend({
   classNames: ['container']
-})
+});
