@@ -49,7 +49,7 @@ module.exports = function(grunt) {
           { test: /\.hbs$/, loader: 'ember-templates' },
           { test: /\.styl$/, loader: 'style!raw!stylus' },
           { test: /\.css$/, loader: 'style!css' },
-          // all svg,png,woff,eot,ttf,otf files but not raw.svg
+          // all svg,png,woff,eot,ttf,otf files
           { test: /\.(svg|png|woff|eot|ttf|otf)$/, loader: 'url?limit=100000' },
         ],
       },
