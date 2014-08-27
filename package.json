@@ -62,9 +62,9 @@
     "level-rest": "^0.1.0"
   },
   "napa": {
-    "ember": "components/ember#1.5.1",
+    "ember": "components/ember#1.7.0",
     "handlebars": "components/handlebars.js#v1.3.0",
-    "jquery": "jquery/jquery#2.1.0",
+    "jquery": "jquery/jquery#2.1.1",
     "ember-data": "components/ember-data#1.0.0-beta.7",
     "qunit": "jquery/qunit#1.14.0"
   }

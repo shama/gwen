@@ -7,7 +7,7 @@
 var CodeMirror = require('codemirror');
 require('codemirror/lib/codemirror.css');
 module.exports = Ember.Component.extend({
-  defaultTemplate: require('./index.hbs'),
+  layout: require('./index.hbs'),
   classNames: ['editor'],
 
   /**
